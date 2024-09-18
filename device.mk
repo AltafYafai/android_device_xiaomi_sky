@@ -600,4 +600,8 @@ PRODUCT_PACKAGES += \
     libpng.vendor \
     libwfdaac_vendor
 
+# BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
 
+# Google Camera
+$(call inherit-product, vendor/xiaomi/sky-gcam/Camera-vendor.mk)
