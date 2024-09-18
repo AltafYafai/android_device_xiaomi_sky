@@ -20,9 +20,7 @@ vendor/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_workspaceFileXml.qwsp
 
 # ADSP
 vendor/bin/adsprpcd
-vendor/bin/audioadsprpcd
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libvmmem.so
@@ -112,7 +110,6 @@ vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/libsndcardparser.so
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
@@ -777,15 +774,6 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# EMBMS
-vendor/bin/embmsslServer
-vendor/etc/init/init.embmssl_server.rc
-vendor/lib64/libembmsservice.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
-
 # ESE powermanager
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
@@ -1076,16 +1064,6 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti-rkp.xml
 vendor/lib/libqtikeymint.so
 vendor/lib64/libqtikeymint.so
 
-# Listen
-vendor/etc/vintf/manifest/manifest_non_qmaa.xml
-vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
-vendor/lib64/hw/sound_trigger.primary.parrot.so
-vendor/lib64/libeai_fixed.so
-vendor/lib64/libeai_float.so
-vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
-
 # Media
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
@@ -1108,7 +1086,6 @@ vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_performance_ravelin.xml
 vendor/etc/media_codecs_ravelin.xml
-vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_ravelin.xml
@@ -1175,14 +1152,6 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
-vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
-
-# Modem manager
-vendor/bin/modemManager
-vendor/etc/init/modemManager.rc
-vendor/etc/seccomp_policy/modemManager.policy
 
 # Native public libraries
 vendor/etc/public.libraries.txt
@@ -1247,12 +1216,6 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# Psiclient
-vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/lib/libpsi.so
-vendor/lib64/libpsi.so
-
 # QCC
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/libgrpc++_unsecure.so
@@ -1269,28 +1232,6 @@ vendor/lib64/libsubsystem_control.so
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
-
-# QESDK
-vendor/bin/qesdk-manager
-vendor/bin/sensors-qesdk
-vendor/etc/init/qesdk-manager.rc
-vendor/etc/init/vendor.sensors.qesdk.rc
-vendor/etc/seccomp_policy/qesdk.policy
-vendor/etc/seccomp_policy/sensors-qesdk.policy
-vendor/lib/libqesdk.so
-vendor/lib/libqesdk_manager.so
-vendor/lib/vendor.qti.qesdsys-V1-ndk_platform.so
-vendor/lib64/libqesdk.so
-vendor/lib64/libqesdk_manager.so
-vendor/lib64/vendor.qti.qesdhal@1.0.so
-vendor/lib64/vendor.qti.qesdhal@1.1-impl.so
-vendor/lib64/vendor.qti.qesdhal@1.1.so
-vendor/lib64/vendor.qti.qesdsys-V1-ndk_platform.so
-
-# QGuard
-vendor/bin/qguard
-vendor/etc/init/qguard.rc
-vendor/etc/qguard.json
 
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
@@ -1355,6 +1296,7 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/app/QtiTelephony/QtiTelephony.apk
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1380,6 +1322,7 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrilNrd
@@ -1512,7 +1455,6 @@ vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/librilqmimiscservices.so
-vendor/lib64/librmnetctl.so
 vendor/lib64/libshsusr_verinfo.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxiaomi_qcril.so
@@ -1799,41 +1741,10 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Trusted User Interface
-vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/libTouchInputVM.so
-vendor/lib/libTrustedInput.so
-vendor/lib/libTrustedInputTZ.so
-vendor/lib/libTrustedUI.so
-vendor/lib/libTrustedUITZ.so
-vendor/lib/libTrustedUIVM.so
-vendor/lib/libminksocket_vendor.so
-vendor/lib/libsi.so
-vendor/lib/vendor.qti.hardware.trustedui@1.0.so
-vendor/lib/vendor.qti.hardware.trustedui@1.1.so
-vendor/lib/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
-vendor/lib64/libTouchInputVM.so
-vendor/lib64/libTrustedInput.so
-vendor/lib64/libTrustedInputTZ.so
-vendor/lib64/libTrustedUI.so
-vendor/lib64/libTrustedUITZ.so
-vendor/lib64/libTrustedUIVM.so
 vendor/lib64/libminksocket_vendor.so
-vendor/lib64/libsi.so
-vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
-vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
-vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Trustzone
 vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
-
-# USB
-vendor/bin/init.qcom.usb.sh
-vendor/etc/init/hw/init.qcom.usb.rc
 
 # Vibrator
 vendor/firmware/aw87xxx_acf.bin
