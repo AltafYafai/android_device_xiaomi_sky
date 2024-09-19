@@ -1,0 +1,1602 @@
+[33mcommit 54d77df16e7d21fb66028fe56051fdefdcc83b1f[m[33m ([m[1;36mHEAD -> [m[1;32muniverse[m[33m)[m
+Author: Sonal Singh <sonal.singh.19993@gmail.com>
+Date:   Thu Sep 19 19:11:51 2024 +0000
+
+    some fixups
+
+[33mcommit 59cc37a38393ac137f1503833397dea2782aa38b[m
+Author: Sonal Singh <sonal.singh.19993@gmail.com>
+Date:   Thu Sep 19 18:30:34 2024 +0000
+
+    reverted telephony apks and xiapmi-telephony-stub
+
+[33mcommit 6d2702a4b5515ee57e3d5193c24e7a22b58ed515[m[33m ([m[1;31morigin/universe[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 26aa8a6 59f669b
+Author: Altaf Yafai <49188943+AltafYafai@users.noreply.github.com>
+Date:   Wed Sep 18 20:34:42 2024 +0530
+
+    Merge branch 'BlissRoms-Devices:universe' into universe
+
+[33mcommit 26aa8a6ff31fa91c7429b9a6ac9ce4c259106255[m
+Author: Sonal Singh <sonal.singh.19993@gmail.com>
+Date:   Wed Sep 18 15:01:19 2024 +0000
+
+    added BCR & Gcam
+
+[33mcommit 59f669b7e884cc74aa646641fd63a99e9f03c263[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 17 19:55:32 2024 +0530
+
+    sky: Build vendor variant of libpiex
+
+[33mcommit 49e04f0c9da06edfa5ca3257a318c4e3c3b9a281[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 17 19:54:52 2024 +0530
+
+    sky: sync props with latest update
+
+[33mcommit 117d2a1a88f7e94d2c36b87c9e556954560a60f1[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 17 19:52:21 2024 +0530
+
+    sky: Fixup ims libs symlink
+
+[33mcommit aeca3ef5474ca5759d08fb4d05bd131aefa1d49e[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Mon Jul 8 08:56:25 2024 +0300
+
+    sky: Remove media_codecs_google_c2*
+    
+    AOSP codecs can be used by default and it is not necessary to include
+    them device side.
+    
+    Change-Id: I8227b06f0466b614f12fa9008402b92461ea3dd0
+
+[33mcommit e0f2667cee6f882a94367623e47468c05baa7f79[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Fri Jul 5 20:04:49 2024 +0300
+
+    sky: Use AOSP default Codec2/OMX ranks
+    
+    debug.stagefright.ccodec=4
+    is the default value in frameworks.
+    
+    debug.stagefright.omx_default_rank=0
+    was used to rank OMX SW codecs lower than OMX HW codecs
+    but we have removed all OMX SW codecs now.
+    
+    Change-Id: Idf55ec02c2c0f4d2fa73f949cffef0d820a54570
+
+[33mcommit 07535b2b2b09dfc29a9b2c8f0ebc7ae15a02b800[m
+Author: Aaron Kling <webgeek1234@gmail.com>
+Date:   Fri Jun 28 22:09:34 2024 -0500
+
+    sky: Remove software omx codec references
+    
+    These are no longer available as of Android 14 QPR3. The C2 codecs
+    available by default in the swcodec apex will be used instead.
+    
+    Change-Id: I8cdf3e700823779a7382c66c3df8410d41209b7c
+
+[33mcommit d40f7552aa461309410a141b2154c901b4f3c61d[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Mon Aug 12 12:48:36 2024 +0200
+
+    sky: Kill libstagefrighthw
+    
+    This will not be loaded when vendor.media.omx=0 is set
+    
+    Change-Id: I6c87910028feae4c0711ce9bfc0ed2fb5e7445c0
+
+[33mcommit bdaf6c277ab00b1ff3e685cb5de5abeea5e1c3eb[m
+Author: Sungtak Lee <taklee@google.com>
+Date:   Wed Mar 30 15:11:05 2022 -0700
+
+    sky: Disable OMX
+    
+    Bug: 222649162
+    Test: make
+    Change-Id: Iaf1046c610804c5bdb3b0f591e9907539534ea06
+
+[33mcommit d7bb5e405c8e906fa60ed6b5a099f827d9ea8e64[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Tue Mar 19 23:12:22 2024 +0100
+
+    sky: Add hotword enrollment permissions
+    
+    Change-Id: I4ddb3dcf85ab45b02808cbe3d28cb8caa2858dca
+
+[33mcommit ec859600fb4086f1232f93c963e588d73f45c90e[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:43:02 2024 +0000
+
+    sky: Drop modemManager blobs
+    
+    Change-Id: Ic0d8eff53db30254da2c7cbfab0db4ade1fb1bc8
+
+[33mcommit 9cb0f9dc05253a9e607700e364506ca03ca2657e[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:41:59 2024 +0000
+
+    sky: Drop trusted user interface blobs
+    
+    Change-Id: I6f52fb63b4ca222eacbe49ad5debfd0624a03e07
+
+[33mcommit d33c89e0a14c3bd2e13e1b987439c1255dab26b2[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:36:52 2024 +0000
+
+    sky: Drop qguard blobs
+    
+    Change-Id: Ie2eaa48e0a7fc0195dd35e2a4d5a7122cd73bbd7
+
+[33mcommit 1f7ce357b7e1bb5cbd6710e3b45318a51bf7df6a[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:35:43 2024 +0000
+
+    sky: Drop qesdk blobs
+    
+    Change-Id: Ib5e64bdde9fea4ff868ee2222ae1064eb3ef3d48
+
+[33mcommit 2671f45a25c5ab2bc1aa17d8a5668cb7d2ffee50[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:21:44 2024 +0000
+
+    sky: Drop psiclient blobs
+    
+    Change-Id: I81346135d961b772c5981ee818f65f8ccedb7ceb
+
+[33mcommit 014899509caa2f33e5a3e8fb85f85ee2f119e20b[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:20:12 2024 +0000
+
+    sky: Drop embmssl blobs
+    
+    Change-Id: I8fadba34ce12ac8371e116404249c7ecd9338e7e
+
+[33mcommit a7637bcf08cc2df269a16ed34ce1e146dedb29d5[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:17:19 2024 +0000
+
+    sky: Stop building automotive vehicle manager lib
+    
+    Change-Id: I9d03cb4746bfc6ed3a9b61db70465cdcd3669c32
+
+[33mcommit 646f6bf434ffcd99869645d4d4560e0646ac8eca[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 7 06:14:54 2024 +0000
+
+    sky: Stop building atrace service
+    
+    Change-Id: If51fd3019dd823b2fb31f7d8273de6bc9cf8f173
+
+[33mcommit 43e7bd48aeee6bbb51406e0a088b7ef45e976a84[m
+Author: Yumi Yukimura <me.cafebabe@gmail.com>
+Date:   Tue Jun 25 00:19:16 2024 +0800
+
+    sky: Migrate to QTI USB Gadget 1.2 HIDL
+    
+    Change-Id: I6adbca2fab9a3fe0477d17f9786166828b786710
+
+[33mcommit 15ead2a75bcf26e74c89afa0c49843004626cb2b[m
+Author: Nolen Johnson <johnsonnolen@gmail.com>
+Date:   Tue Aug 9 10:54:48 2022 -0400
+
+    sky: Swap to QTI USB init scripts
+    
+    Change-Id: Ibb01a6a8b9817b01a8db397cdf82a89659562d62
+
+[33mcommit d2e18f6ec819c7967bf1035a016e26b180cb7aa9[m
+Author: AdarshGrewal <adarshgrewal@gmail.com>
+Date:   Sun Aug 25 12:00:03 2024 +0000
+
+    sky: Build libsndcardparser from source
+    
+    Change-Id: I338a79e8c5e4cfe4070e249f952b6c6b18ca6202
+
+[33mcommit 3848a96a9bf09de8ac2b48769f8bd9c1642aa9d3[m
+Author: Bruno Martins <bgcngm@gmail.com>
+Date:   Sun Aug 25 11:56:13 2024 +0000
+
+    sky: Build opensource soundtrigger HAL
+    
+    Change-Id: I956d53a67841a9e1e296de6b73f08ef2efac7470
+
+[33mcommit 684f7f16f46181284aa874fcbbb8f01c58696cea[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sun Aug 25 11:54:25 2024 +0000
+
+    sky: Disable proprietary listen sound model
+    
+    Change-Id: I9a836a8c0a68a45b1c4ae5233adfd1f14789b8f6
+
+[33mcommit 71ffa627455ebcf95b8eebb786c9baf0d7cde8d6[m
+Author: AdarshGrewal <adarshgrewal@gmail.com>
+Date:   Sun Aug 25 11:51:40 2024 +0000
+
+    sky: Build audioadsprpcd from source
+    
+    Change-Id: I19d38c534edf26886bd354548eaee661dd79f793
+
+[33mcommit 32d2ceb4f53cc47346dc8cfe0089d156e94f1ea0[m
+Author: Sebastiano Barezzi <barezzisebastiano@gmail.com>
+Date:   Sun Aug 25 11:48:58 2024 +0000
+
+    sky: Build mtdservice interface lib from source
+    
+    Change-Id: Ie739f283c4be1b77d57aaee1941ed46957da1d1a
+
+[33mcommit 3fa6b3d5b19e29316ca344e4ca84aaa1299e14a5[m
+Author: Bruno Martins <bgcngm@gmail.com>
+Date:   Sun Aug 25 11:46:19 2024 +0000
+
+    sky: Switch to source-built mlipay interface
+    
+    Change-Id: I7daaaffd9fe7a870e42c1d882b52dc93b3231120
+
+[33mcommit bbbfcc0879647597ac29421c3693dde0e0137d59[m
+Author: AdarshGrewal <adarshgrewal@gmail.com>
+Date:   Sun Aug 25 11:43:47 2024 +0000
+
+    sky: Build librmnetctl from source
+    
+    Change-Id: I4c36cf8fbc3bc55f39e5ca3aa4680aa5acd836c7
+
+[33mcommit 0ac429711d0e25f11ad9b3a0d54a5bc4ac8ca254[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sun Aug 25 11:35:45 2024 +0000
+
+    sky: Unpin telephony apks
+    
+    Instead, we provide the isMiuiRom method via xiaomi-telephony-stub
+    The permissions patches for com.qti.permission.BIND_QTI_IMS_SERVICE
+    and com.qualcomm.qti.permission.USE_EXT_TELEPHONY_SERVICE don't
+    seem to be needed without injection.
+    
+    Change-Id: Ifd904b845efa3e89dda89cedb6b495f61ca3308f
+
+[33mcommit 0ccd673ee001dbb65bfa805f71572402a46731cf[m
+Author: danielml <daniel@danielml.dev>
+Date:   Sun Aug 25 11:32:51 2024 +0000
+
+    sky: Build xiaomi-telephony-stub
+    
+    To provide the required Xiaomi IMS methods
+    
+    Change-Id: I1e75476a0d2ed55b5eae2a0a2c6ca4c3c4e2c0f1
+
+[33mcommit 25eae534e210a2808db1369da5449379088cd114[m
+Author: Altaf Yafai <49188943+AltafYafai@users.noreply.github.com>
+Date:   Tue Sep 10 00:22:37 2024 +0530
+
+    Update BoardConfig.mk
+    
+    updated for crdroid bring-up
+
+[33mcommit 0e5ee7551d02ddcdfc8557fd58bc2589b44e9262[m
+Author: Altaf Yafai <49188943+AltafYafai@users.noreply.github.com>
+Date:   Tue Sep 10 00:19:28 2024 +0530
+
+    Update AndroidProducts.mk
+    
+    updated for crdroid bringup
+
+[33mcommit f209c2c6b37cef5b6cdd961e1a782f8fe22b3dda[m
+Author: Altaf Yafai <49188943+AltafYafai@users.noreply.github.com>
+Date:   Tue Sep 10 00:16:56 2024 +0530
+
+    Update and rename bliss_sky.mk to lineage_sky.mk
+    
+    updated for crdroid bring up
+
+[33mcommit 603dc427a7b9c5d1b910cffedf491f6b3985d2f3[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Aug 3 15:45:59 2024 +0530
+
+    sky: fixup soong namespaces for libperfmgr
+
+[33mcommit 1e5585e74d0f8fb993a6f9738617bcc1f4d596a7[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Aug 2 17:32:52 2024 +0530
+
+    sky: Drop poweropt blobs
+
+[33mcommit 9b14af8088ff3db25791b24d3ad25dbaeb280e2a[m
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Tue Jul 2 08:01:02 2024 +0530
+
+    sky: powerhint: Reduce the little cluster min frequency for INTERACTION
+    
+    Change-Id: Idacee130d2d78ecb3f6bb078deca1e92020da87a
+
+[33mcommit 548b79371b739e8bf514c8c15bf6ecf25a478595[m
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Tue Jul 2 08:00:11 2024 +0530
+
+    sky: powerhint: Make interaction hint energy aware
+    
+    Change-Id: I74603fb03d7998a3f5ae5354c6e38cadaf561c8c
+
+[33mcommit 7076970687adffff5d395f5d59065d8d18dd1372[m
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Sat Jun 29 13:50:58 2024 +0530
+
+    sky: Update extension for libperfmgr
+    
+    Change-Id: I1c1271739980f806a4109a47b5b3fe4d7fff8440
+
+[33mcommit 5f86373e7620f1751540abbab9e259433db26dc9[m
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Tue Jun 18 22:48:00 2024 +0530
+
+    sky: Switch to OSS libperfmgr
+    
+    Entirely re-written powerhint.
+    
+    Change-Id: Ib4dfdb7fafd0e0bab6591fe516a3d87e42a06ffe
+
+[33mcommit 4224592289953a8ead5e59367354c84f60d176af[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Fri Aug 2 17:20:34 2024 +0530
+
+    sky: Drop mfidoca, mtd- and tidaservice
+    
+    Change-Id: I0b7a851137b954ea767ff1846c9ca30b36d1c875
+
+[33mcommit b89a13b160900440bea2297296c8faf7f431364f[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Aug 2 17:11:00 2024 +0530
+
+    sky: Update from HyperOS v816.0.5 UMWINXM
+
+[33mcommit 24e3b2e7c2b8725b7c77689b535882535d750b73[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Fri Aug 2 17:08:24 2024 +0530
+
+    sky: Drop COMMON_LUNCH_CHOICES
+    
+    As of 14 QPR2 this is broken, let's remove it instead of updating it
+    every 3 months. breakfast is the way to go.
+    
+    Change-Id: I097bd54b894d9a49c7ce8b1ab6f343349e268fd8
+
+[33mcommit 0a1a50ef922a8cb6fe850286a4723a24a00a2801[m
+Author: Tushar Bharti <tushar9915@gmail.com>
+Date:   Sat Jul 6 18:53:03 2024 +0530
+
+    sky: Update CarrierConfig from HyperOS 1.0.5
+
+[33mcommit f756e28207a0ba64315fa7327778b0b813c64476[m
+Author: Paul Crowley <paulcrowley@google.com>
+Date:   Sat Jul 6 08:50:39 2024 +0000
+
+    sky: Remove wait_for_keymaster and all references
+    
+    No longer needed now init listens for property changes on a
+    separate thread.
+    
+    Bug: 186580823
+    Test: Cuttlefish boots successfully
+    Change-Id: Ief3a546d2154231d18957c2f703bd128966d7288
+
+[33mcommit abc47dff7eed3eaae1abe0f98cc19444a1c0c973[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Jul 6 08:41:46 2024 +0000
+
+    sky: fix cpu variant runtime flags
+
+[33mcommit 023ad9b1971fbd7a7be1e363208add231a4e33ee[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Aug 2 17:00:53 2024 +0530
+
+    sky: Enable doze pulse pickup
+
+[33mcommit 6f5b751bbb6d00f36a0bbe09436c307b7701efe6[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jun 30 10:08:33 2024 +0000
+
+    sky: Remove extcon genfs rules
+
+[33mcommit e5077ec6a1083c4338265b4039860b8ca4cfe92e[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jun 30 10:07:27 2024 +0000
+
+    sky: Properly set acdb for different regions
+    
+    - fixes low sound
+
+[33mcommit 5d5bb4c72784335d0a13603e4d7abed41120564b[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jun 30 09:56:46 2024 +0000
+
+    sky: Cleanup manifest
+
+[33mcommit b63e008932351dac37e89d27ed99d54e747404ba[m
+Author: Michael Bestas <mikeioannina@gmail.com>
+Date:   Wed Jun 26 18:00:18 2024 +0000
+
+    sky: Build missing libraries for 14 QPR3
+    
+    Change-Id: I6a84526ca1e9f4e5140c8068646433cab3fe85b2
+
+[33mcommit 28e261ebbb672c8b97633a9fa52aaef340568f77[m
+Author: Chirayu Desai <chirayudesai1@gmail.com>
+Date:   Wed Jun 26 17:57:45 2024 +0000
+
+    sky: Don't set BOARD_API_LEVEL
+    
+    build/make/core/board_config.mk:1001: error: BOARD_API_LEVEL must not
+    set manully. The build system automatically sets this value..
+    
+    Change-Id: If59ae9dea6cb13701d7217a1c0a355d4e07113eb
+
+[33mcommit 0c31bb8c3519df7ba3deacbb1dcf34652d5b24a5[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Jun 15 17:33:55 2024 +0530
+
+    sky: parts: Import MiSound
+    
+    Co-authored-by: Joey <joey@lineageos.org>
+    Co-authored-by: Henrique Silva <jhenrique09.mcz@hotmail.com>
+    Co-authored-by: TheScarastic <warabhishek@gmail.com>
+    Co-authored-by: Harsh Shandilya <msfjarvis@gmail.com>
+
+[33mcommit 9434266bc4b05eb586ff1161cd6f8fca82c9789e[m
+Author: Prateek Maru <47496067+prateekmaru@users.noreply.github.com>
+Date:   Sat Jun 15 14:34:47 2024 +0000
+
+    sky: Add device spec sheet
+
+[33mcommit 23a52823e6aa49b7e7498b63ca5408072279059f[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Jun 15 10:40:44 2024 +0000
+
+    sky: set nfc props for xig03 model
+
+[33mcommit a9c631f5a55ea11d9a364bf318fa9d3e2bcddeca[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Jun 15 07:18:44 2024 +0000
+
+    sky: Cleanup media section and build oss ones
+    
+    Change-Id: I6fb771855b3e540f6ef27342e5fa84deed4f3fb7
+
+[33mcommit c24e55b07b62cd4dbfcb47fc510988fe7d0ecb66[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 14 18:51:57 2024 +0000
+
+    sky: Switch to common qti health aidl
+
+[33mcommit 81a2eaae754e02c09bf74693ce97e54a699a60cc[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jun 16 12:49:30 2024 +0530
+
+    sky: properties: Use variable refresh rate
+
+[33mcommit 250cd771694042c19df2f3dd7e9e7091c62e7c6c[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Fri Jun 14 17:59:52 2024 +0530
+
+    sky: Build display hal
+    
+    - Blobs from ingot-user 14 UKQ1.231121.127 127 release-keys
+    
+    sky: Drop 32 bit display blobs
+
+[33mcommit d1888a59461d5b7e34a92d87d8c7633b63209fc1[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Wed Dec 20 05:27:35 2023 +0000
+
+    sky: rootdir: Override power HAL service and add input group
+    
+    * This allows to access /dev/input/event* which is required for DT2W.
+    
+    Change-Id: Idbab93138ba3221338413283552004d92e8ef333
+
+[33mcommit e39943f13100613c63e4696656db32cb2316c627[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 7 14:38:13 2024 +0000
+
+    sky: Use partition reserved size config
+
+[33mcommit e15f49a7e6da84871c53ed0f52932e877733de21[m
+Author: chandu078 <chandudyavanapelli03@gmail.com>
+Date:   Fri Jun 7 19:25:59 2024 +0530
+
+    sky: Kang libqcrilNrSmsModule.so from OOS 11.C.51
+
+[33mcommit 8870049517a8c529f82667a7562b9cafda8c74fc[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Fri Jun 7 12:49:16 2024 +0000
+
+    sky: Build Lineage Health HAL
+    
+    Change-Id: I70cc903a03ac9fa3303bb8fa039c9de4806449bf
+
+[33mcommit 412898744e6e56a3ccc63561ef8ec8b6bbfc540b[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Fri Jun 7 12:35:59 2024 +0000
+
+    sky: Build qcom soundfx effects from source
+    
+    Change-Id: Idc4f0c317b2aa69856456dc02693409ddb37b4ec
+
+[33mcommit 6bbb428f6a3e70a351397747f05ce6ae3a9df239[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Fri Jun 7 12:32:00 2024 +0000
+
+    sky: Build qti thermal hal from source
+    
+    Change-Id: Iff18a5fb4a5717aa6b77fdd64a87367dccd5df0b
+
+[33mcommit c0cd12fcd62f415e8166ec74e5b07d190e8484ae[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun May 26 07:58:39 2024 +0000
+
+    sky: Pin modified thermal configs
+    
+    - Increased charging threshold and cpu throttling
+
+[33mcommit d2a5fb711db1e2ff18f60a66d17819682cbbfa60[m
+Author: LuK1337 <priv.luk@gmail.com>
+Date:   Sun May 26 07:56:03 2024 +0000
+
+    sky: Add script to update sha1sums of kanged blobs
+    
+    Change-Id: Id2e8cfb8d3b6f65f69c91a89bacd615fdcc45753
+
+[33mcommit b7e4144e3fbea7bb96257d0524a899bf828cff61[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Wed May 29 14:17:17 2024 +0000
+
+    sky: Add support for XIG model
+    
+    Signed-off-by: Lostark13 <tushar9915@gmail.com>
+
+[33mcommit f3a77d7f8c5de4bbfd5bc572f62077b9e2dd29b4[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat May 25 11:36:05 2024 +0000
+
+    sky: props cleanp
+
+[33mcommit ddcec47b22f4d1d997e49b0c09e1d0b8adcce1bd[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat May 25 08:21:48 2024 +0000
+
+    sky: Remove some 32 bit blobs
+
+[33mcommit e694a35d72e552928d3eebd06a97890e7c9c041b[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 7 19:14:02 2024 +0530
+
+    sky: Add prebuilt agmipc interface blob
+
+[33mcommit 1a6e702c954239ffb05d9f0d7fffddcde04ea194[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 7 19:10:22 2024 +0530
+
+    sky: Align display props with stock
+
+[33mcommit a84509b61330e3431cccfe626e91330c3c2bbc03[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 7 19:08:32 2024 +0530
+
+    sky: Import missing blobs
+
+[33mcommit 082dd73465ce21e0b400f97f14a4c25b6b4e262d[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun May 12 14:18:27 2024 +0300
+
+    sky: Update from HyperOS V816.0.4.0.UMWINXM
+
+[33mcommit 140b67a79a29329834370f819d5a20e025ce8611[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Fri Jun 7 18:59:58 2024 +0530
+
+    sky: Build FM
+
+[33mcommit 58760423d75e5d499c19dab6e69d7df81ae50552[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Jun 7 18:55:51 2024 +0530
+
+    sky: Drop gralloc handle reserved size flag
+
+[33mcommit 5c5797aef843a16b0a6070f32cb85410176f460f[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Wed May 1 07:17:31 2024 +0300
+
+    sky: Blissify
+
+[33mcommit aa9cafe2b5d25273aacaa4f19044e261397a0271[m
+Author: Giovanni Ricca <giovanniricca@proton.me>
+Date:   Wed Dec 6 09:50:13 2023 +0100
+
+    sky: Build goodix lib from source
+    
+    Change-Id: Ibaf1b9489b509318032c720c9c83e315cfe6ab3e
+
+[33mcommit 2b8437b86c28faa845f293ab1979cd7dadbf5d30[m
+Author: Peter Kalauskas <peskal@google.com>
+Date:   Sat Apr 20 11:51:37 2024 +0530
+
+    sky: parts: Enable use_resource_processor for all sysui deps
+    
+    This will make the build faster
+    
+    Test: m checkbuild
+    Bug: 295208392
+    Change-Id: I0c1bd901429bbe3bf81c1530e156735f8637a96e
+
+[33mcommit 2352510ba3502d4b265d38c8bd00676d3bed9076[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Apr 19 15:29:44 2024 +0000
+
+    sky: Build USB hal from source
+
+[33mcommit 0c7d8495dcf93d6649a6dcb8d34d0c7a568a4b09[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 24 04:37:41 2024 +0000
+
+    sky: uprev Vendor SPL
+
+[33mcommit 57bff751dd22a640d5cb85cff5ee912d1f6b39e7[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 24 04:34:20 2024 +0000
+
+    sky: Add missing display configs
+
+[33mcommit d2534a001b2cf984d8cf0719405dc76c51569c17[m
+Author: Cole Faust <colefaust@google.com>
+Date:   Sat Apr 20 11:38:53 2024 +0530
+
+    sky: Add BUILD_BROKEN_INCORRECT_PARTITION_IMAGES
+    
+    Qcom has issues that prevent it from working with a hermetic partition build.
+
+[33mcommit 6a046463b6ec104805f65699a1aba272ee4429b0[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Apr 20 11:36:31 2024 +0530
+
+    sky: Drop tcmd blobs
+
+[33mcommit 7e919f286dad0de48043147d77cb2278f33415f8[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Apr 20 11:35:18 2024 +0530
+
+    sky: Switch to prebuilt libgrpc++_unsecure
+
+[33mcommit 49689fccc8d98858b02a531fee8f55fed617038b[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Thu Mar 7 13:55:19 2024 +0000
+
+    sky: Sync props from latest release
+
+[33mcommit eb5bc860fa7542108cb029aa6d413df818cdca36[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Thu Mar 7 13:53:25 2024 +0000
+
+    sky: Disable blur
+
+[33mcommit 3717c0e17c24d5374104a1fe2bca46ca56393a72[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Thu Mar 7 13:52:33 2024 +0000
+
+    sky: Switch to jemalloc for camera
+
+[33mcommit 1e9608122513c29469a81e649ec6fdff8a0ac37c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 3 13:16:30 2024 +0000
+
+    sky: build sensorservice
+
+[33mcommit 63f852818ae0e0914916a76f7e2abea1a834144a[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 3 12:19:22 2024 +0000
+
+    sky: Change reserved partiton sizes
+
+[33mcommit 1016259505b7c4229c33f5dd865578b75321cfc3[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 3 11:22:24 2024 +0000
+
+    sky: Use new thermal configs
+
+[33mcommit 633d86a40499ea75b3776486c0deee8392cddbb9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Mar 3 11:15:39 2024 +0000
+
+    sky: Add missing touch fw
+
+[33mcommit 25296a0b901f2ec49190666bd117d771167e9362[m
+Author: Bruno Martins <bgcngm@gmail.com>
+Date:   Sat Mar 2 19:19:27 2024 +0000
+
+    sky: Migrate to AIDL ClearKey DRM HAL
+    
+    Change-Id: Iad5cc1176978137c647069197b33f49fb4d98ab2
+
+[33mcommit 9a796adc5a0a2cf776fded2bc980daac007c3654[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 19:16:37 2024 +0000
+
+    sky: Update blobs from HyperOS
+
+[33mcommit 51c234e824f91ba16d6990190d0a61e8cf065738[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 16:21:58 2024 +0000
+
+    sky: Use prebuilt agm blobs
+
+[33mcommit 2ddda972d42a03f733fa09a82a58e03ea44571b9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 16:20:10 2024 +0000
+
+    sky: Import thermal client blobs
+
+[33mcommit 5367ddd96f82e65556fdb2f71d26cf7657c3f459[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 16:17:38 2024 +0000
+
+    sky: disable system side bt audio hal
+
+[33mcommit 8db7026908e12bf53beb08c54b6d31d22d5fbf6c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 16:13:02 2024 +0000
+
+    sky: Drop Perf LM blobs
+
+[33mcommit aed19f8c57b4d07830775e5b220df2383c4e997c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Mar 2 15:51:34 2024 +0000
+
+    sky: drop qti-telephony jar
+
+[33mcommit fe1ac133d3e7d2559baf44dc5fccdaeffd4762d9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jan 28 13:33:55 2024 +0000
+
+    sky: Use vibe patterns for effects
+
+[33mcommit 5655963927e9d47eb802d1012abdbcb8aa3b9071[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sat Nov 18 05:32:27 2023 +0000
+
+    sky: Add support for NFC devices
+    
+    - reworked libinit for other models as well
+
+[33mcommit 58169ee9abde1a017871ff94f4e3cc8279d229a9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jan 28 13:26:29 2024 +0000
+
+    sky: use new default thermal config
+
+[33mcommit e59499bccc7176595ac11097e181ad0a94a64d9a[m
+Author: Yuan Si <do4suki@gmail.com>
+Date:   Wed Aug 30 02:34:17 2023 +0800
+
+    sky: sepolicy: Import changes for XiaomiParts
+    
+    As of https://github.com/LineageOS/android_device_xiaomi_sm8250-common/commit/9a28fbf9259ff86703bf2e3e14af58fadca1c545
+    
+    Change-Id: Ied842fc9b23f61d7475311e82e8d2b998a9bedd6
+    Signed-off-by: Yuan Si <do4suki@gmail.com>
+    Signed-off-by: saikiran2001 <bjsaikiran@gmail.com>
+
+[33mcommit ce352b981f673bd46639101a833301574dde89e1[m
+Author: Adithya R <gh0strider.2k18.reborn@gmail.com>
+Date:   Thu Oct 13 23:25:05 2022 +0530
+
+    sky: parts: Use S theme in thermal and refresh rate settings
+    
+    The new spinner theme in T (v33) is too large.
+    Ref: https://github.com/AOSPA/android_frameworks_base/commit/da5db6f9db991193aab5bf1cb47f13a8087a5a47
+    
+    Change-Id: Ic97415a8b91758c6fb5d83d8841c4ed70bceb5ff
+
+[33mcommit bdf75b6640aa49d8442ff55d22d8dcdcf4e1360d[m
+Author: AnierinB <anierin@evolution-x.org>
+Date:   Mon Jun 6 18:22:46 2022 -0700
+
+    sky: parts: Use directBootAware
+    
+    - This way settings can be restored prior to unlocking after reboot.
+    
+    Change-Id: I2d17a9ad672f05aa93c6e8b2435625e074d7348b
+
+[33mcommit 45b536bb3d92657bec51c2d346e372786717d23d[m
+Author: daniml3 <danimoral1001@gmail.com>
+Date:   Tue Oct 12 01:25:19 2021 +0530
+
+    sky: parts: Declare exported flags in manifest for SDK 32
+    
+    Apps targeting Android 12 and higher are required to specify
+    an explicit value for android:exported when the corresponding
+    component has an intent filter defined.
+    
+    See https://developer.android.com/guide/topics/manifest/activity-element#exported for details.
+    
+    Co-authored-by: Arian <arian.kulmer@web.de>
+    Co-authored-by: johnmart19 <johnivan19999@gmail.com>
+    Change-Id: I9a224a03635e6b954dd390ab4e554fe24fe6ac31
+
+[33mcommit 37e688e01455b7ce80c0e7276569e81b10b002f3[m
+Author: Joey Huab <joey@evolution-x.org>
+Date:   Thu Dec 23 21:44:02 2021 +0100
+
+    sky: parts: Increase BootCompletedReceiver priority
+    
+     * set the priority to SYSTEM_HIGH_PRIORITY to match other system services
+       so our settings are restored faster on bootup
+    
+    Change-Id: I24f26b63ee04a230e5e64239cfeb204d91f28f9a
+    Signed-off-by: Joey Huab <joey@evolution-x.org>
+
+[33mcommit 418b5c602b6a9f69b33c16abb5cc64a3d464f334[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Thu Nov 4 17:54:06 2021 +0100
+
+    sky: parts: Target current sdk
+    
+    Change-Id: Ie7fb32d79e59c8fb28711e89e1cc8e5519ecda76
+
+[33mcommit 6a2718d11a903650c566e4b4d65227a327da0c97[m
+Author: Pulkit077 <pulkitagarwal2k1@gmail.com>
+Date:   Fri Aug 19 12:15:42 2022 +0530
+
+    sky: parts: Fix app mode layout height for Android 13
+    
+    Change-Id: I920eb7397229afd1dc4919ba42aed68e74c29ae3
+
+[33mcommit 3465722797a44d47df92590c22a26056e6be9a77[m
+Author: Yuan Si <do4suki@gmail.com>
+Date:   Wed Aug 30 02:15:18 2023 +0800
+
+    sky: Import XiaomiParts from sm8250-common
+    
+    Only keep per-app thermal stuff.
+    
+    As of https://github.com/LineageOS/android_device_xiaomi_sm8250-common/commit/62e8e0551849a1c2d4f1d35a328d5eb70330bf53
+    
+    Change-Id: I04f972c99e4d5167c49812f512f458e239282aa2
+    Signed-off-by: Yuan Si <do4suki@gmail.com>
+
+[33mcommit 2bafe3126db20a2223cb222b744536f51612503f[m
+Author: chrisl7 <wandersonrodriguesf1@gmail.com>
+Date:   Sat Sep 30 01:36:47 2023 +0000
+
+    sky: healthd-ext: Rename hal to xiaomi to avoid compilation conflicts
+    
+    Change-Id: I8f33b6870eccfd19272cfbdb816b5b53371012c5
+
+[33mcommit 370e16822b940aa9d16db9eafe30f9be7d61fda7[m
+Author: Fenglin Wu <quic_fenglinw@quicinc.com>
+Date:   Tue Oct 17 12:21:07 2023 +0800
+
+    sky: healthd-ext: update VINTF manifest version to 2
+    
+    Update VINTF manifest version to 2 to match with the latest definition
+    in android.hardware.health.IHealth AIDL interface.
+    
+    Change-Id: Iabf4165c52cca95ff8aa75a67bbc61f4c102bb9e
+    (cherry picked from commit ad957d158ad1d53193536a2e0cee016836d90cd0)
+
+[33mcommit 79c612d0c10ad2f678f1d7895ed823df7e82a6b1[m
+Author: Fenglin Wu <quic_fenglinw@quicinc.com>
+Date:   Tue Jul 5 18:27:00 2022 +0800
+
+    sky: healthd-ext: Update AIDL HAL service installation paths
+    
+    Update the installation path for vendor and recovery partition
+    respectively.
+    
+    Change-Id: I1908d10d782127f555e2fb316f3640bc93efcdbd
+
+[33mcommit 3dddebaf2959a126ea8fa182a40568fba4087110[m
+Author: Fenglin Wu <quic_fenglinw@quicinc.com>
+Date:   Mon Jul 4 16:45:00 2022 +0800
+
+    sky: healthd-ext: Add suspend support for charger mode
+    
+    Override ChargerEnableSuspend() function to true to support kernel
+    suspend and resume in charger mode.
+    
+    Change-Id: I01ceaecf7e918504624b2bf1bfb34207fcde74e7
+
+[33mcommit 0a4019828438197644043386c9ee1fd83a6a3f55[m
+Author: Fenglin Wu <quic_fenglinw@quicinc.com>
+Date:   Mon Jun 27 23:12:24 2022 +0800
+
+    sky: healthd-ext: Add health HAL AIDL implementation
+    
+    Add health HAL AIDL implementation which is a service running for
+    both health HAL and charger mode.
+    
+    Change-Id: I1f3205d1e34d93ed1739d5fa29c95a8f2b2d2894
+
+[33mcommit 6d8d07375ec4f4ec5ec0ff5910c88322ae570f13[m
+Author: Master <mhmdeveloperofficial@gmail.com>
+Date:   Sun Jan 28 13:10:30 2024 +0000
+
+    sky: Disable sparse image build on all type of file system
+    
+    We use ext4 type. Sparse image cause mounting issue
+
+[33mcommit 3ccf1769887136e02e1b2aa499fdccc31b40578f[m
+Author: John Galt <johngaltfirstrun@gmail.com>
+Date:   Sun Jan 28 13:07:59 2024 +0000
+
+    sky: move to AIDL wifi
+
+[33mcommit d65b9af20a1172071e73ca4c55575a9868328027[m
+Author: Tim Zimmermann <tim@linux4.de>
+Date:   Sun Jan 28 13:05:05 2024 +0000
+
+    sky: Patch blobs to load libprotobuf-cpp-full-3.9.1
+
+[33mcommit 7ad364dc2cdabbaaf763a56cf1a846045a64a870[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jan 28 13:00:30 2024 +0000
+
+    sky: drop vndk v32 usage for display composer
+
+[33mcommit 23e105b16b430fb11fb36576d76859eccb930d17[m
+Author: Anay Wadhera <anay1018@gmail.com>
+Date:   Sun Jan 28 12:54:42 2024 +0000
+
+    sky: Patch keymint to include rsk aidl for missing symbol
+    
+    * Also build some necessary packages
+    
+    Change-Id: Iad47fb49883eb3e6af3726815e2f996c35aaab09
+
+[33mcommit 4cdba7073d1ed696992d87f00f7e1123679bd5f8[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jan 28 12:51:38 2024 +0000
+
+    sky: build libstdc++ from source
+
+[33mcommit fc3546a15a3ecfc520c9b9431a3648a31cb9e1a0[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Nov 5 15:24:37 2023 +0100
+
+    sky: setup libinit for different models
+    
+    Co-authored-by: SebaUbuntu <seba@sebaubuntu.dev>
+
+[33mcommit e8c0bf3623e7732b9629f21f0acee60e0271a4da[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Jan 28 12:40:38 2024 +0000
+
+    sky: use 4gb dalvik heap configs
+
+[33mcommit 6753df51fd36c089cfeb306b0bd55d1a715dc53a[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Oct 29 07:47:13 2023 +0000
+
+    sky: fix sfps location
+
+[33mcommit dcfd6861b7eb528c03a6333320c3670c56bc9b1c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 25 05:44:03 2023 +0000
+
+    sky: remove some overlays
+
+[33mcommit b41a070d4bf5e74065ee9892d83ed1e3c3e5af95[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 24 13:04:45 2023 +0000
+
+    sky: Switch to enforcing
+
+[33mcommit 9b2a74fac312a6ff5c54951f02a99f54cbdb7c01[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Sep 29 04:58:34 2023 +0000
+
+    sky: fix sepolicy for virtual proximity sensor
+
+[33mcommit 9d403a55566736d185e81ed7b8d7dca7ed0c9a31[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Sep 23 08:19:08 2023 +0000
+
+    sky: Add power HAL extension to handle dt2w
+
+[33mcommit 964480d5973a6538439d463f0ec3dbf16c403733[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 24 12:53:48 2023 +0000
+
+    sky: dont stop cnss on shutdown request
+
+[33mcommit e161bf833a948da655cbe72d113a45088a234449[m
+Author: Adithya R <gh0strider.2k18.reborn@gmail.com>
+Date:   Sun Sep 24 12:52:12 2023 +0000
+
+    sky: rootdir: Update SSR setup paths
+    
+    5.10+ platforms use the new remoteproc subsystems.
+
+[33mcommit 16668d7c1f66e9850a34d2a0278d36f5b1abcb3e[m
+Author: dianlujitao <dianlujitao@lineageos.org>
+Date:   Sun Sep 24 12:49:42 2023 +0000
+
+    fixup: sky: Enable AOSP bluetooth audio HAL v2
+    
+    Change-Id: I4d12752ae5fb2829d6612647c8740c84967f5434
+
+[33mcommit ba27485fc1fdcfae975f85b6b83f7406f55c51ef[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 24 12:40:22 2023 +0000
+
+    sky: Pull thermal engine configs from stock
+
+[33mcommit b0ecfeaf05cd081221272db66dff75d43ac0d0ab[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 24 12:37:23 2023 +0000
+
+    sky: Build vibrator
+
+[33mcommit e6c5e3799fda363b1b7b1cca7b5b22d631d4dae1[m
+Author: PRANAY BHARGAV BHAVARAJU <quic_pbhavara@quicinc.com>
+Date:   Tue Sep 19 14:54:07 2023 +0530
+
+    sky: ueventd: Avoid setting permission for /dev/hw_random
+    
+    Below patch from system/core is setting required access policy
+    for /dev/hw_random. And CTS test is updated accordingly
+    
+    https://android-review.googlesource.com/c/platform/system/core/+/2229337
+    https://android-review.googlesource.com/c/platform/cts/+/2232052
+    
+    Change-Id: I762dfa3b1e84dee6c49fc178b5b75cf1c134cfb7
+
+[33mcommit 73246ffcca2e0ec7ae0015eab0e59183f52a2d3b[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 19 14:51:21 2023 +0530
+
+    sky: initial sepolicy
+    
+    Kanged from los marble
+
+[33mcommit 6f124e324de818fe5558d773e14465c3d81d168a[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 19 14:41:07 2023 +0530
+
+    sky: Add telephony_injection
+
+[33mcommit b7eda6412e4f0ecc15c824c3242d6a5b80c73b6c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 19 08:51:52 2023 +0000
+
+    sky: kang patched ims blobs
+
+[33mcommit 6936cde9ed64882311ecff60f050221e9f74da9c[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 19 14:38:24 2023 +0530
+
+    sky: Add qcrilNvOpt to fcm
+
+[33mcommit 4052e8be995ce3aab6cd25a1b36c631a706904b9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:40:02 2023 +0530
+
+    sky: add goodix fingerprint to fcm
+
+[33mcommit 6725fbaa1bd75fb8cc50084f40b8f3210b1e1434[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:38:17 2023 +0530
+
+    sky: uprev gnss to v4
+
+[33mcommit 100c878a4049ec9965cd2b2341b6631111fd856e[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:37:42 2023 +0530
+
+    sky: Uprev qti ims to v11
+
+[33mcommit 41bdb63bf8a7f80d65f5e28008efd5dec5876e74[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:36:04 2023 +0530
+
+    sky: drop some manifest entries
+
+[33mcommit 1a597acd9452bd044000bfe0a8c264331bc53b95[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:32:19 2023 +0530
+
+    sky: vintf: drop fingerprint extensions
+
+[33mcommit 2f01740142521e7a55b73382caa749a97f563384[m
+Author: Sebastiano Barezzi <barezzisebastiano@gmail.com>
+Date:   Mon Sep 18 20:22:18 2023 +0530
+
+    sky: Use RSA4096 keys for recovery and vbmeta_system
+    
+    * Per https://android.googlesource.com/platform/external/avb/+/master/README.md#build-system-integration, SHA256_RSA4096 is used if BOARD_AVB_ALGORITHM isn't defined
+    * We can assume bootloader is able to understand RSA4096 keys for recovery and vbmeta_system as well
+    
+    Change-Id: I7325387ed4bf04407629c48bbc2e7126c151c192
+
+[33mcommit a3686f1c316c237bd53721a99b97e2f8352cf666[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:19:45 2023 +0530
+
+    sky: Fix wifi flags
+
+[33mcommit 233d51f1bdf153bd588c58bf8c200eafbaeaf0dd[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:16:23 2023 +0530
+
+    sky: Force sysfs fallback for fw loading
+
+[33mcommit 0365787e2e76417377e2ef57ec57f7be4aa07dde[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 20:15:30 2023 +0530
+
+    sky: Add permissions for FP hal
+
+[33mcommit 961d92258b099dd550338b56938a6b65772c4a80[m
+Author: xiaowang <xiaowang@codeaurora.org>
+Date:   Sun Aug 27 11:15:38 2023 +0530
+
+    sky: props: Add support for low power adaptive control feature
+    High power consumption issues were reported for some HS/CK/Speaker
+    in close range(1 meter) on hastings platform as they may not have
+    perfect RSSI golden range logic for power control and always request
+    SOC to increase TX power to max power level. Newer hastings SOC support
+    LPA power control to avoid unnecessary higher power consumption.
+    
+    The change enable this soc feature according to value of property.
+    And disable it for special remote devices which have been added in BL
+    when new ACL link is created.
+    
+    If feature is enabled, controllable power level for remote is L0-L9,
+    BT controller increase it to L10 or L11 according to RSSI and NAK rate.
+    Otherwise controllable power level for remote is from 0 to max power
+    level signified in NVM, most likely L11 for hastings.
+    
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit fac6ee8b51851b3ca7a4d2831d3e3d4c7086909c[m
+Author: dianlujitao <dianlujitao@lineageos.org>
+Date:   Sun Aug 27 11:14:31 2023 +0530
+
+    sky: Disable BT A2DP AAC whitelist.
+    * Results in some supposedly AAC compatible devices
+      like the Samsung Galaxy Buds Live not having it as
+      an option despite being a supported codec of the
+      device.
+    
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 4f764de7347ec09f3370a9ef6f3ef5ec7174e0f5[m
+Author: Satheesh Kumar Pallemoni <spallemo@codeaurora.org>
+Date:   Tue Jul 11 17:53:46 2023 +0530
+
+    sky: AAC frame control enabled for hal implementation.
+    
+    - Added below two changes to enable the AAC frame control
+    when property persist.vendor.bt.a2dp.hal.implementation
+    has nbeen enabled.
+    
+    - Send bitrate value to MM on basis of MTU and sample rate.
+    
+    - A2dpSrc: Calculate bitrate with exact peer MTU value.
+    
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 280785d30536d430e2c37f93c5bde7e198ec011c[m
+Author: Alexander Koskovich <akoskovich@pm.me>
+Date:   Tue Jul 11 03:12:34 2023 +0530
+
+    sky: prop: Enable Qualcomm TrueWireless™ Stereo
+    
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 8b8ff48c9687044eb72c23d61e033c3fce94655a[m
+Author: M Safoorah Banu <safoorah@codeaurora.org>
+Date:   Tue Jul 11 03:08:55 2023 +0530
+
+    sky: Enable TWS plus feature using persist property
+     - Enable/Disable TWS plus feature support using persist
+       property - "persist.vendor.btstack.enable.twsplus"
+    
+     - TWS plus feature is supported only if property is set to
+       "True" else feature is not supported.By default property
+       is set to False.
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 35532bae61d47e68e3e9ddd826ede3a2aa7bc1a2[m
+Author: Woody Lin <woodylin@google.com>
+Date:   Sun Aug 27 10:42:00 2023 +0530
+
+    sky: Enable zygote critical window
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 6fffc6587169c9a82c9cf1af079354fd21a1b732[m
+Author: frozenking <frozenking1240196@gmail.com>
+Date:   Sun Aug 27 13:07:20 2023 +0530
+
+    sky: Load ravelin mediacodecs config
+    
+    Co-authored-by: johnmart19 <johnivan19999@gmail.com>
+
+[33mcommit 0aed111b80e171971ba001b7a36cc8a0200ae805[m
+Author: Anand <kumaranand@google.com>
+Date:   Sun Aug 27 23:40:39 2023 +0530
+
+    sky: wifi: Enable automatic channel selection
+    * Automatic Channel Selection algorithms and implementations
+       are used to enable interfaces to automatically figure
+       out which channel configuration to use for initiating
+       communication, for any mode of operation which initiates
+       radiation (AP, Mesh, IBSS, P2P).
+    
+       https://wireless.wiki.kernel.org/en/users/documentation/acs
+    
+    Change-Id:  a0ef55bc7edfd44d07824c34a59001149f5e6dc3
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 857b39c969671d3639efe256908651581064d109[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Wed Oct 12 01:17:10 2022 +0200
+
+    sky: Switch to uninfied supplicant service rc entry
+    
+    Change-Id: I6cc5a1d062c19be570d5631cb7ea9c760a992aef
+
+[33mcommit 7e7fda0748dc373aed6bc66f3a280ade792713ae[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Tue Mar 7 00:33:13 2023 +0100
+
+    sky: Set audio flags
+    
+    Change-Id: I43706f761ac871638d00c2ca4b14c083de5d9701
+
+[33mcommit d0439ca05c1634c987b6ab4578d0321ad33a8e8c[m
+Author: Luofan Chen <clfbbn@gmail.com>
+Date:   Wed Jan 18 23:01:48 2023 +0800
+
+    sky: Define TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE
+    
+    Otherwise the error happens:
+    
+     E qdmetadata: Invalid gralloc handle (at 0x7fc743ec58): ver(12/12) ints(23/22) fds(2/2)
+     E qdmetadata: validateAndMap: Private handle is invalid - handle:0x7fc743ec58
+    
+    Change-Id: Ia62146e8e4bef1342dc964724bd0d088656ad4bc
+
+[33mcommit 945ec407b579428a607c93529600d6b56b42e287[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Fri Aug 25 10:09:35 2023 +0800
+
+    sky: Include bluetooth_audio_policy_configuration_7_0.xml
+
+[33mcommit a302e24a6b981336e2340b16d8a24e6eaf221582[m
+Author: CBG-leeco <74150843+CBG-leeco@users.noreply.github.com>
+Date:   Sun Apr 30 09:47:57 2023 +0530
+
+    sky: Fix qti_power_hal
+    
+    * This fixes the following logspam:
+    
+    E/ QTI PowerHAL: Failed to acquire lock for hint_id: 10A5
+
+[33mcommit c32712fd24e1b96829d87b40e13660eaf642a90f[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 24 22:36:36 2023 +0800
+
+    sky: Add reserved size of dynamic partition
+
+[33mcommit 638651e113643ab77970dde95c6e2d2bee2bac98[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Aug 19 15:57:30 2023 +0200
+
+    sky: Build libvolumelistener from source
+    
+    Change-Id: I99b9699d3c01c04ee2afd8e0575cdf0d7a8de76d
+
+[33mcommit d9b5f5f25f0ff0a0902bf2374cc598f604c4836f[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 17 19:01:19 2023 +0530
+
+    sky: config: Add audio policy configuration from stock
+
+[33mcommit c725f81fcdce945e75dfe6ab9e083755782f55db[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 17 18:58:48 2023 +0530
+
+    sky: Fix keymint service
+
+[33mcommit 235c4cbe0d89f31eda62070ded97384296094b46[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Aug 20 21:42:08 2023 +0800
+
+    sky: Build vendor.display.config@2.0.vendor
+
+[33mcommit a0cad4858d5d6dec123a031d80812333a6173df9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 12 14:14:25 2023 +0530
+
+    sky: Set QCV family skus
+
+[33mcommit 85d2c40504c0d1606ffbb3bf51dcd1b60dd64ad8[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 12 13:53:21 2023 +0530
+
+    sky: update kernel building
+
+[33mcommit 20ad7c46c48f6fdd749da553367ea420365491b5[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 14:09:04 2023 +0800
+
+    sky: fix copy kernel modules
+    
+    - move prebuilts to kernel repo
+
+[33mcommit 3d1b7ab19037c4d68f676e607ee101c4cfa0a8b1[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 11:06:41 2023 +0800
+
+    sky: import scripts from stock
+    
+    * Refer to https://github.com/cupid-development/android_device_xiaomi_sm8450-common/tree/lineage-20/rootdir/etc
+
+[33mcommit 2585b28c9f6dcbeca4e10f52e7e15efbcf9bcccc[m
+Author: Kyuofox <kyuofox@gmail.com>
+Date:   Tue Aug 15 15:42:01 2023 +0800
+
+    sky: Replace libutils with VNDK v32 for display composer
+    
+    Change-Id: I4079f46bebda0203d5af98b658eee4bcc838ed5b
+
+[33mcommit 19de47cca9005f6f69c4128c1056602f8a4a89e0[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 10:40:27 2023 +0800
+
+    sky: Import config.fs from https://git.codelinaro.org/clo/la/device/qcom/common/-/blob/qcom-devices.lnx.7.0.r1-rel
+
+[33mcommit dbce6d51a7aaa4528ab7c7f808358e4dbf0c2914[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 10:28:38 2023 +0800
+
+    sky: Add A/B syslink
+
+[33mcommit 564653bbd87233b057a4b2d668870131cd90aa76[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 13:09:16 2023 +0530
+
+    sky: Build vendor
+
+[33mcommit 1a4427e20829d104e79b5a408ec81b547beb4c44[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 09:42:19 2023 +0800
+
+    sky: import hidl from https://github.com/cupid-development/android_device_xiaomi_sm8450-common/tree/lineage-20/hidl
+
+[33mcommit ecf8173678029a6203231767bf9fce96bf7bc5bd[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 09:04:51 2023 +0800
+
+    sky: Import compatibility_matrix.xml
+    
+    * from https://git.codelinaro.org/clo/la/device/qcom/common/-/blob/qcom-devices.lnx.7.0.r1-rel/compatibility_matrix.xml
+
+[33mcommit d5c9f8d1a17fe1a6ac2a629609b21dc0057759f9[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Aug 29 10:10:01 2023 +0530
+
+    sky: Import manifest_ravelin
+
+[33mcommit cb97c35af1912ba5ac2e9a717d000610d5f45bf5[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Thu Aug 17 08:45:42 2023 +0800
+
+    sky: import props from stock
+
+[33mcommit a8beb4b77c5987463c6eca778d9c56a21b3f78af[m
+Author: LibXZR <i@xzr.moe>
+Date:   Mon Jul 31 03:11:27 2023 +0530
+
+    sky: props: Set max active modem count
+    
+    This fixes telephony crash on first boot when shipping with
+    user + flatten apex. This is caused by a potential race in
+    fallback path, so set this prop to avoid running into it.
+    
+    Change-Id: f8396e983a3bbedeb684ea462557fa3a52678e50
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 6e9055295b52622b221bb6c1a8c95143269652bf[m
+Author: Shinjo Akane <akane@akanework.org>
+Date:   Tue Jun 6 20:46:30 2023 +0800
+
+    sky: Make `extract-files.sh` && `setup-makefiles.sh` executable
+    
+    Signed-off-by: Shinjo Akane <akane@akanework.org>
+
+[33mcommit 2ae1fbe68e327016d7e7e24146c3f6ad09740ac7[m
+Author: Danny Baumann <dannybaumann@web.de>
+Date:   Sun Sep 18 23:01:43 2022 +0100
+
+    sky: Enable call recording
+
+[33mcommit 3b56d24ee1175cc41ccb2f7d6e17444fea94bf36[m
+Author: johnmart19 <johnivan19999@gmail.com>
+Date:   Mon Jul 31 03:06:52 2023 +0530
+
+    sky: Enable VoNR Calls support
+    
+    Change-Id: 644aee2f27b74422636e8362b4e7bce0c72c06f6
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit 8ead63c1efe94d253bac46c2fb5f9d5d3c596236[m
+Author: Cosmin Tanislav <demonsingur@gmail.com>
+Date:   Mon Jun 12 01:46:08 2023 +0800
+
+    sky: props: Allow overriding volte, vt and wfc
+
+[33mcommit dc21401cb36581685f358ec5ac50afceb277690d[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Mon Jun 5 19:40:20 2023 +0800
+
+    sky: Update patch ims and QtiTelephony from V14.0.19.0.TMRCNXM
+
+[33mcommit f9d22760266ba6fe2732a4597b804433f8044954[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 12:42:59 2023 +0530
+
+    sky: Add refresh rate controls
+
+[33mcommit c36e6dda29aa1e66c8ffae6212a266806d5b928e[m
+Author: Danny Baumann <dannybaumann@web.de>
+Date:   Sun Jul 30 04:16:23 2023 +0530
+
+    sky: overlay: Enable option for full screen aspect ratio
+    Change-Id: c31a9501567b4b8be0c6c4416bcd955e63ff22b3
+    
+    Signed-off-by: frozenking <frozenking1240196@gmail.com>
+
+[33mcommit fcf85f074cf5eaa22a9379a57f467066ec109d72[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Sep 18 12:42:17 2023 +0530
+
+    sky: Add rro_overlays
+
+[33mcommit 0af87b7427e97d5a65acc16da590ec2fff6a78e4[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Tue Sep 12 12:37:13 2023 +0530
+
+    sky: Update fstab
+
+[33mcommit 5210795715222fdf1eda1f5d50c49c4fb7338df7[m
+Author: LynnrinChan <lynnrin@lynnrin.moe>
+Date:   Tue Oct 18 06:02:59 2022 +0000
+
+    sky: Ignore neverallows
+
+[33mcommit b57c63d180d1cf69cc8a0cbfcc929827e6847c6b[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 09:18:16 2023 +0800
+
+    sky: Build power-service-qti
+
+[33mcommit 1e9522c94bb3169858fc9869cd88c0399f0b8e20[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 09:17:28 2023 +0800
+
+    sky: Build Perf 2.3
+
+[33mcommit 0f500cc79adaf7927ac2275eff7e033613542c2f[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 09:16:26 2023 +0800
+
+    sky: move default.mk to configs
+
+[33mcommit a5430b7e34409d65fde0c8701545f80899beedda[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Sun Sep 17 19:42:05 2023 +0530
+
+    sky: Add vendor ramdisk flags
+
+[33mcommit 80d32fef3ba6beb4f9c16b3f6bc2c49c50ac297a[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:45:05 2023 +0800
+
+    sky: Add AVB flags
+
+[33mcommit 6b52e5be1c407ddfb69149165efefecf29496c10[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:41:38 2023 +0800
+
+    sky: We used f2fs
+
+[33mcommit 04c5c50152c56402bf21efe33d41149ab6111773[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:37:23 2023 +0800
+
+    sky: Populate proprietary-files.txt
+
+[33mcommit 8bae28a1840b23ea63d98dc5104a327883abd86f[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:34:05 2023 +0800
+
+    sky: Add patched ims & qtelephony apk
+
+[33mcommit dc2cfe0fd1cb85753e0cc14876c42d0dc43d3559[m
+Author: Alexander Koskovich <akoskovich@pm.me>
+Date:   Sat Jan 22 00:46:40 2022 -0700
+
+    sky: Update telephony package list to LA.QSSI.12.0.r1-05600-qssi.0
+    
+    Change-Id: Id6fdabd9d5e0df6d23a982e0e39e06a8acff67ef
+
+[33mcommit 2b31e217879b7e06aaa77d901fa969258d86c26a[m
+Author: Arian <arian.kulmer@web.de>
+Date:   Sat Jun 18 18:55:07 2022 +0200
+
+    sky: Build telephony packages and disable rild
+    
+    Change-Id: I876600dd0c72eceeef65be9d78d869368ec635c9
+
+[33mcommit 6736bb156175f96a6eec8c804145ffa83cdcc239[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:24:28 2023 +0800
+
+    sky: Import properties from stock
+
+[33mcommit 302d8b4842927d36038abca888a42b49b7882e3a[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Sun Jun 4 08:20:43 2023 +0800
+
+    sky: Add kernel cmdline
+
+[33mcommit 5346049cb8f6c1933ee3dced59a91117413e4306[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Tue May 30 17:56:14 2023 +0800
+
+    sky: support updatable_apex
+
+[33mcommit e065fae20761506542af300e4ef66b62efc82cac[m
+Author: YuKongA <1348547200@qq.com>
+Date:   Mon May 29 00:14:20 2023 +0800
+
+    sky: Add target VNDK extra 32
+
+[33mcommit 3039d092ddfd3d0978cc4c9eb7d84e72bf23bc1f[m
+Author: kubersharma001 <kubersharma001@gmail.com>
+Date:   Mon Oct 12 12:17:15 2020 +0200
+
+    sky: include QCOM sepolicy
+    
+    Change-Id: I96714846258d6c409ed9257da15ac2281bfd1d9b
+
+[33mcommit 86a40942a1011f9c75bfcd89ae29238ac96e6ea4[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Aug 18 11:04:22 2023 +0530
+
+    sky: Add prebuilts from stock
+
+[33mcommit b482e95b4f505b77b33ba289034c0d07df62bb1b[m
+Author: Michael Bestas <mkbestas@lineageos.org>
+Date:   Mon Jan 31 03:27:21 2022 +0200
+
+    sky: Add board-info.txt
+    
+    * Fixes flashall in fastbootd
+
+[33mcommit 81987bf582db6ec91eca441cb63de1a008ecef6b[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Mon Aug 7 18:54:20 2023 +0530
+
+    sky: Import keylayout from stock
+
+[33mcommit c43ebf3bfe447e4bd733943abadc18d439d9ae91[m
+Author: Lostark13 <tushar9915@gmail.com>
+Date:   Fri Aug 18 11:14:16 2023 +0530
+
+    sky: Add stock frameworks compaitibility matrix
+
+[33mcommit 22bc51f6633a32b83dd3a461367014c038ebc3bb[m
+Author: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date:   Tue May 23 18:00:53 2023 +0800
+
+    sky: Initial empty device tree
